@@ -6,6 +6,11 @@ namespace Progtech_Beadando
 {
     class Director
     {
-        
+        private readonly IBuilder builder;
+
+        public Director(IBuilder requestedBuilder)
+        {
+            builder = requestedBuilder;
+        }
     }
 }

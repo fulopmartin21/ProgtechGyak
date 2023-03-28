@@ -6,7 +6,7 @@ namespace Progtech_Beadando
 {
     class Extras
     {
-        private string name { get; set; }
-        private string price { get; set; }
+        public string name { get; set; }
+        public int price { get; set; }
     }
 }

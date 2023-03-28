@@ -6,10 +6,11 @@ namespace Progtech_Beadando
 {
     class Car
     {
-        private int tires;
-        private int engine;
-        private bool computer;
-        private bool charger;
-
+        public int tires { get; set; }
+        public int engine { get; set; }
+        public bool computer { get; set; }
+        public bool charger { get; set; }
+        public int price { get; set; }
+        public List<Extras> extra { get; set; }
     }
 }

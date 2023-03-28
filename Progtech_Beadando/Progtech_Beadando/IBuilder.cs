@@ -6,7 +6,6 @@ namespace Progtech_Beadando
 {
     abstract class IBuilder
     {
-        protected Car car;
         public abstract void reset();
         public abstract void setEngine();
         public abstract void setTires();
@@ -16,9 +15,8 @@ namespace Progtech_Beadando
 
         public abstract void setExtras(List<Extras> extras);
 
-        public Car getCar
-        {
-            get { return car; }
-        }
+        public abstract int getPrice();
+
+        public abstract Car getCar();
     }
 }

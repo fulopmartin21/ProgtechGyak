@@ -166,7 +166,7 @@ namespace Progtech_Beadando
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listBox1);
             this.Name = "Form1";
-            this.Text = "AbstractFactory";
+            this.Text = "Builder";
             this.ResumeLayout(false);
             this.PerformLayout();
 
