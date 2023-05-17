@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using Progtech_Beadando.AdapterPattern;
-using Progtech_Beadando.BuilderPattern;
+using Progtech_Beadando.Tests;
 
 namespace Progtech_Beadando
 {
@@ -17,6 +17,8 @@ namespace Progtech_Beadando
         public Form1()
         {
             InitializeComponent();
+            BuilderTests builderTest = new BuilderTests();
+            builderTest.BuilderTest1();
             string connectionString = "Persist Security Info=False;database=autoszalon;server=localhost;Uid=root;Pwd=admin;port=3306";
             try
             {
@@ -220,6 +222,11 @@ namespace Progtech_Beadando
                     Target target = new Adapter();
                     target.export(AutoLista);
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

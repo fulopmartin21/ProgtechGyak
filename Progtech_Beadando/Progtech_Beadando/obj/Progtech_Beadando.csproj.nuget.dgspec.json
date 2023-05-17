@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Niki\\Desktop\\Fülöp_Martin_Progtech\\Progtech_Beadando\\Progtech_Beadando\\Progtech_Beadando.csproj": {}
+    "C:\\Users\\Niki\\Desktop\\ProgtechGyak-20230517T193542Z-001\\ProgtechGyak\\Progtech_Beadando\\Progtech_Beadando\\Progtech_Beadando.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Niki\\Desktop\\Fülöp_Martin_Progtech\\Progtech_Beadando\\Progtech_Beadando\\Progtech_Beadando.csproj": {
+    "C:\\Users\\Niki\\Desktop\\ProgtechGyak-20230517T193542Z-001\\ProgtechGyak\\Progtech_Beadando\\Progtech_Beadando\\Progtech_Beadando.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Niki\\Desktop\\Fülöp_Martin_Progtech\\Progtech_Beadando\\Progtech_Beadando\\Progtech_Beadando.csproj",
+        "projectUniqueName": "C:\\Users\\Niki\\Desktop\\ProgtechGyak-20230517T193542Z-001\\ProgtechGyak\\Progtech_Beadando\\Progtech_Beadando\\Progtech_Beadando.csproj",
         "projectName": "Progtech_Beadando",
-        "projectPath": "C:\\Users\\Niki\\Desktop\\Fülöp_Martin_Progtech\\Progtech_Beadando\\Progtech_Beadando\\Progtech_Beadando.csproj",
+        "projectPath": "C:\\Users\\Niki\\Desktop\\ProgtechGyak-20230517T193542Z-001\\ProgtechGyak\\Progtech_Beadando\\Progtech_Beadando\\Progtech_Beadando.csproj",
         "packagesPath": "C:\\Users\\Niki\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Niki\\Desktop\\Fülöp_Martin_Progtech\\Progtech_Beadando\\Progtech_Beadando\\obj\\",
+        "outputPath": "C:\\Users\\Niki\\Desktop\\ProgtechGyak-20230517T193542Z-001\\ProgtechGyak\\Progtech_Beadando\\Progtech_Beadando\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Niki\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,6 +43,10 @@
             "ClosedXML": {
               "target": "Package",
               "version": "[0.100.3, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[3.0.2, )"
             },
             "MySqlConnector": {
               "target": "Package",
