@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Progtech_Beadando
 {
-    class Car
+    public class Car
     {
         public int tires { get; set; }
         public int engine { get; set; }

@@ -11,10 +11,7 @@
           "ClosedXML": "0.100.3",
           "MSTest.TestFramework": "3.0.2",
           "MySqlConnector": "2.2.5",
-          "System.Data.SqlClient": "4.8.5",
-          "Microsoft.Data.Tools.Schema.Sql": "15.0.0.0",
-          "Microsoft.Data.Tools.Schema.Sql.UnitTesting": "16.0.0.0",
-          "Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter": "16.0.0.0"
+          "System.Data.SqlClient": "4.8.5"
         },
         "runtime": {
           "Progtech_Beadando.dll": {}
@@ -909,46 +906,6 @@
             "fileVersion": "1.5.2.0"
           }
         }
-      },
-      "Microsoft.Data.Tools.Schema.Sql/15.0.0.0": {
-        "runtime": {
-          "Microsoft.Data.Tools.Schema.Sql.dll": {
-            "assemblyVersion": "15.0.0.0",
-            "fileVersion": "15.0.5472.2"
-          }
-        }
-      },
-      "Microsoft.Data.Tools.Schema.Sql.UnitTesting/16.0.0.0": {
-        "runtime": {
-          "Microsoft.Data.Tools.Schema.Sql.UnitTesting.dll": {
-            "assemblyVersion": "16.0.0.0",
-            "fileVersion": "16.0.62205.5190"
-          }
-        }
-      },
-      "Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter/16.0.0.0": {
-        "runtime": {
-          "Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter.dll": {
-            "assemblyVersion": "16.0.0.0",
-            "fileVersion": "16.0.62205.5200"
-          }
-        }
-      },
-      "Microsoft.Data.Tools.Utilities/15.0.0.0": {
-        "runtime": {
-          "Microsoft.Data.Tools.Utilities.dll": {
-            "assemblyVersion": "15.0.0.0",
-            "fileVersion": "15.0.5472.2"
-          }
-        }
-      },
-      "Microsoft.SqlServer.TransactSql.ScriptDom/15.0.0.0": {
-        "runtime": {
-          "Microsoft.SqlServer.TransactSql.ScriptDom.dll": {
-            "assemblyVersion": "15.0.0.0",
-            "fileVersion": "15.0.5472.2"
-          }
-        }
       }
     }
   },
@@ -1608,31 +1565,6 @@
       "sha512": "sha512-8tnUCmMbn6c/HGuHFyq1sulHym8YReTKDNXFFQk0U8nldNx6RGrwRvLh0+aQjEc7YoC3Q1ztH1npLt7dClKqjw==",
       "path": "xlparser/1.5.2",
       "hashPath": "xlparser.1.5.2.nupkg.sha512"
-    },
-    "Microsoft.Data.Tools.Schema.Sql/15.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Microsoft.Data.Tools.Schema.Sql.UnitTesting/16.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter/16.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Microsoft.Data.Tools.Utilities/15.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Microsoft.SqlServer.TransactSql.ScriptDom/15.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

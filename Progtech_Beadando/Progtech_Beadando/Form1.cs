@@ -4,11 +4,13 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using Progtech_Beadando.AdapterPattern;
 using Progtech_Beadando.Tests;
+using Progtech_Beadando.Services;
 
 namespace Progtech_Beadando
 {
     public partial class Form1 : Form
     {
+        IGepjarmuAdatServices _gs = new LocalGepjarmuAdatServices();
         List<string> Markak = new List<string>();
         List<string> Tipusok = new List<string>();
         List<Extras> Extrak = new List<Extras>();
@@ -19,55 +21,21 @@ namespace Progtech_Beadando
             InitializeComponent();
             BuilderTests builderTest = new BuilderTests();
             builderTest.BuilderTest1();
-            string connectionString = "Persist Security Info=False;database=autoszalon;server=localhost;Uid=root;Pwd=admin;port=3306";
             try
             {
-                using (MySqlConnection connection = new MySqlConnection(connectionString))
-                {
-                    string query = "SELECT Nev FROM MARKAK";
-                    connection.Open();
-                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
-                    {
-                        MySqlDataReader reader = cmd.ExecuteReader();
-                        while (reader.Read())
-                        {
-                            Markak.Add(reader.GetString(0));
-                        }
-                    }
-                    connection.Close();
-                }
-                using (MySqlConnection connection = new MySqlConnection(connectionString))
-                {
-                    connection.Open();
-                    string query = "SELECT Nev FROM TIPUSOK";
-                    using (MySqlCommand cmd2 = new MySqlCommand(query, connection))
-                    {
-                        MySqlDataReader reader = cmd2.ExecuteReader();
-                        while (reader.Read())
-                        {
-                            Tipusok.Add(reader.GetString(0));
-                        }
-                    }
-                    connection.Close();
-                }
-                using (MySqlConnection connection = new MySqlConnection(connectionString))
-                {
+                var MarkakDAL = _gs.GetMarkak();
+                foreach (var item in MarkakDAL)
+                    Markak.Add(item.Nev);
+                
+                var TipusDal = _gs.GetTipusok();
+                foreach (var item in TipusDal)
+                    Tipusok.Add(item.Nev);
 
-                    connection.Open();
-                    string query = "SELECT ExtraNev,Ar FROM EXTRA";
-                    using (MySqlCommand cmd3 = new MySqlCommand(query, connection))
-                    {
-                        MySqlDataReader reader = cmd3.ExecuteReader();
-                        while (reader.Read())
-                        {
-                            Extras extra = new Extras();
-                            extra.name = reader.GetString(0);
-                            extra.price = reader.GetInt32(1);
-                            Extrak.Add(extra);
-                        }
-                    }
-                }
-                for(int i=0;i<Markak.Count;i++)
+                var ExtraDal = _gs.GetExtras();
+                foreach (var item in ExtraDal)
+                    Extrak.Add(new Extras { name = item.ExtraNev, price = item.Ar});
+
+                for (int i=0;i<Markak.Count;i++)
                 {
                     comboBox1.Items.Add(Markak[i]);
                 }
@@ -175,53 +143,8 @@ namespace Progtech_Beadando
 
         private void button6_Click(object sender, EventArgs e)
         {
-            string connectionString = "Persist Security Info=False;database=autoszalon;server=localhost;Uid=root;Pwd=admin;port=3306";
+            _gs.InsertMegvasarolt(AutoLista);
             
-            using (MySqlConnection connection = new MySqlConnection(connectionString))
-            {
-                    string query = "INSERT INTO Megvasarolt(Marka,Tipus,Vegosszeg) VALUES (@Marka,@Tipus,@Vegosszeg)";
-                    connection.Open();
-                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
-                    {
-                        for(int i=0;i<AutoLista.Count;i++)
-                        {
-
-                        cmd.Parameters.Clear();
-                        cmd.Parameters.AddWithValue("@Vegosszeg",AutoLista[i].price);
-                        switch(AutoLista[i].brand)
-                        {
-                            case "Suzuki":
-                                cmd.Parameters.AddWithValue("@Marka", 1);
-                                break;
-                            case "Daewoo":
-                                cmd.Parameters.AddWithValue("@Marka", 2);
-                                break;
-                            case "Audi":
-                                cmd.Parameters.AddWithValue("@Marka", 3);
-                                break;
-                            case "Mercedes":
-                                cmd.Parameters.AddWithValue("@Marka", 4);
-                                break;
-                        }
-                        switch(AutoLista[i].type)
-                        {
-                            case "Sedan":
-                                cmd.Parameters.AddWithValue("@Tipus", 1);
-                                break;
-                            case "SUV":
-                                cmd.Parameters.AddWithValue("@Tipus", 2);
-                                break;
-                            case "Hibrid":
-                                cmd.Parameters.AddWithValue("@Tipus", 3);
-                                break;
-                        }
-                        cmd.ExecuteNonQuery();
-                        }
-                    }
-                    connection.Close();
-                    Target target = new Adapter();
-                    target.export(AutoLista);
-            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
