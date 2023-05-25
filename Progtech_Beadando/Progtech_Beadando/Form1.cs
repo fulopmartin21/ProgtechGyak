@@ -10,7 +10,7 @@ namespace Progtech_Beadando
 {
     public partial class Form1 : Form
     {
-        IGepjarmuAdatServices _gs = new LocalGepjarmuAdatServices();
+        IGepjarmuAdatServices _gs = new OnlineGepjarmuServices();
         List<string> Markak = new List<string>();
         List<string> Tipusok = new List<string>();
         List<Extras> Extrak = new List<Extras>();
@@ -23,15 +23,15 @@ namespace Progtech_Beadando
             builderTest.BuilderTest1();
             try
             {
-                var MarkakDAL = _gs.GetMarkak();
+                var MarkakDAL = _gs.GetMarkak().GetAwaiter().GetResult();
                 foreach (var item in MarkakDAL)
                     Markak.Add(item.Nev);
                 
-                var TipusDal = _gs.GetTipusok();
+                var TipusDal = _gs.GetTipusok().GetAwaiter().GetResult();
                 foreach (var item in TipusDal)
                     Tipusok.Add(item.Nev);
 
-                var ExtraDal = _gs.GetExtras();
+                var ExtraDal = _gs.GetExtras().GetAwaiter().GetResult();
                 foreach (var item in ExtraDal)
                     Extrak.Add(new Extras { name = item.ExtraNev, price = item.Ar});
 

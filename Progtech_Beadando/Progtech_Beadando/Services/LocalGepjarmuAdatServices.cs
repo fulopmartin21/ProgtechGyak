@@ -6,13 +6,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Progtech_Beadando.Services
 {
     public class LocalGepjarmuAdatServices : IGepjarmuAdatServices
     {
         public string conString = "Persist Security Info=False;database=autoszalon;server=localhost;Uid=root;Pwd=admin;port=3306";
-        public List<Marka> GetMarkak()
+        public async Task<List<Marka>> GetMarkak()
         {
             List<Marka> Markak = new List<Marka>();
             using (MySqlConnection connection = new MySqlConnection(conString))
@@ -34,7 +35,7 @@ namespace Progtech_Beadando.Services
             }
             return Markak;
         }
-        public List<Extra> GetExtras()
+        public async Task<List<Extra>> GetExtras()
         {
             List<Extra> Extrak = new List<Extra>();
             using (MySqlConnection connection = new MySqlConnection(conString))
@@ -61,7 +62,7 @@ namespace Progtech_Beadando.Services
             }
             return Extrak;
         }
-        public List<Tipus> GetTipusok()
+        public async Task<List<Tipus>> GetTipusok()
         {
             List<Tipus> Tipusok = new List<Tipus>();
             using (MySqlConnection connection = new MySqlConnection(conString))
@@ -84,7 +85,7 @@ namespace Progtech_Beadando.Services
             }
             return Tipusok;
         }
-        public bool InsertMegvasarolt(IEnumerable<Car> carList)
+        public async Task<bool> InsertMegvasarolt(IEnumerable<Car> carList)
         {
             try
             {

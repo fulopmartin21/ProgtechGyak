@@ -132,3 +132,4 @@ E:\WebOldalak\ProgtechGyak\Progtech_Beadando\Progtech_Beadando\obj\Debug\netcore
 E:\WebOldalak\ProgtechGyak\Progtech_Beadando\Progtech_Beadando\obj\Debug\netcoreapp3.1\Progtech_Beadando.dll
 E:\WebOldalak\ProgtechGyak\Progtech_Beadando\Progtech_Beadando\obj\Debug\netcoreapp3.1\Progtech_Beadando.pdb
 E:\WebOldalak\ProgtechGyak\Progtech_Beadando\Progtech_Beadando\obj\Debug\netcoreapp3.1\Progtech_Beadando.genruntimeconfig.cache
+E:\WebOldalak\ProgtechGyak\Progtech_Beadando\Progtech_Beadando\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
