@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Niki\\Desktop\\ProgtechGyak-20230517T193542Z-001\\ProgtechGyak\\Progtech_Beadando\\Progtech_Beadando\\Progtech_Beadando.csproj": {}
+    "E:\\WebOldalak\\ProgtechGyak\\Progtech_Beadando\\Progtech_Beadando\\Progtech_Beadando.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Niki\\Desktop\\ProgtechGyak-20230517T193542Z-001\\ProgtechGyak\\Progtech_Beadando\\Progtech_Beadando\\Progtech_Beadando.csproj": {
+    "E:\\WebOldalak\\ProgtechGyak\\Progtech_Beadando\\Progtech_Beadando\\Progtech_Beadando.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Niki\\Desktop\\ProgtechGyak-20230517T193542Z-001\\ProgtechGyak\\Progtech_Beadando\\Progtech_Beadando\\Progtech_Beadando.csproj",
+        "projectUniqueName": "E:\\WebOldalak\\ProgtechGyak\\Progtech_Beadando\\Progtech_Beadando\\Progtech_Beadando.csproj",
         "projectName": "Progtech_Beadando",
-        "projectPath": "C:\\Users\\Niki\\Desktop\\ProgtechGyak-20230517T193542Z-001\\ProgtechGyak\\Progtech_Beadando\\Progtech_Beadando\\Progtech_Beadando.csproj",
-        "packagesPath": "C:\\Users\\Niki\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Niki\\Desktop\\ProgtechGyak-20230517T193542Z-001\\ProgtechGyak\\Progtech_Beadando\\Progtech_Beadando\\obj\\",
+        "projectPath": "E:\\WebOldalak\\ProgtechGyak\\Progtech_Beadando\\Progtech_Beadando\\Progtech_Beadando.csproj",
+        "packagesPath": "C:\\Users\\hanni\\.nuget\\packages\\",
+        "outputPath": "E:\\WebOldalak\\ProgtechGyak\\Progtech_Beadando\\Progtech_Beadando\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Niki\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hanni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "E:\\Toon": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -52,6 +57,10 @@
               "target": "Package",
               "version": "[2.2.5, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.5, )"
@@ -63,7 +72,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -75,7 +85,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.414\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

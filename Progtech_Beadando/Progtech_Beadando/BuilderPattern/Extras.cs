@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Progtech_Beadando
 {
-    class Extras
+    public class Extras
     {
         public string name { get; set; }
         public int price { get; set; }
